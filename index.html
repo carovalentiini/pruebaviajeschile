@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Viajes Chile">
     <meta name="author" content="Carolina Valentini">
-    <meta name="keywords" content="Viajes Chile">
+    <meta name="keywords"
+        content="Viajes, Chile, Patagonia, Turismo, Torres del Paine, San Pedro de Atacama, Volcan Villarrica">
 
     <!-- titulo del documeto -->
-    <title>Desafío Desafío Viajes Chile</title>
+    <title>Desafío Viajes Chile</title>
 
-    <!-- bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <!-- bootstrap css por CDN-->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
     <!-- bootstrap js -->
-    <script refer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <!--  <script refer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -41,10 +41,19 @@
         rel="stylesheet">
 
     <!-- hoja de estilos  -->
-    <link rel="stylesheet" href="assets/css/estilos.css">
+    <!-- <link rel="stylesheet" href="assets/css/estilos.css"> -->
+
+    <!-- JS bootstrap para darle funcionalidad a componentes de bootstrap que ocupan js -->
+    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- hoja de javascript  -->
     <script defer src="./assets/js/javascript.js"></script>
+
+    <!-- vincular archivo css -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+
+
 
 </head>
 
@@ -80,18 +89,21 @@
     </nav>
     <!-- Fin navbar -->
     <!-- Inicio carrusel -->
-    <header>
+    <header class="header">
         <section>
             <div id="carrusel" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./assets/img/carousel1.jpg" loading="lazy" class="d-block w-100" alt="...">
+                        <img src="./assets/img/carousel1.jpg" loading="lazy" class="header__carousel-img d-block w-100"
+                            alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/carousel2.jpg" loading="lazy" class="d-block w-100" alt="...">
+                        <img src="./assets/img/carousel2.jpg" loading="lazy" class="header__carousel-img d-block w-100"
+                            alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/carousel3.jpg" loading="lazy" class="d-block w-100" alt="...">
+                        <img src="./assets/img/carousel3.jpg" loading="lazy" class="header__carousel-img d-block w-100"
+                            alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
@@ -108,132 +120,312 @@
     <!-- Fin carrusel -->
     <main class="container-fluid bg-black">
         <!-- inicio quienes somos -->
-        <section id="quienesSomos" class="text-center d-none d-md-block container pt-4">
-            <h3 class="text-white p-3 fw-light">¿Quiénes somos?</h3>
-            <hr>
-            <div class="row align-items-start text-white pb-5">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div>
-                        <div class="bg-info">
-                            <i class="fa-solid fa-plane fa-sm" style="color: #ffffff;"></i>
-                        </div>
-                        <div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo enim non corporis ducimus
-                            illum fugit libero aperiam ex quisquam magnam velit, itaque similique aspernatur aliquid
-                            accusamus id quam dicta vitae!
-                        </div>
-                    </div>
+        <article class="qs container" id="quienesSomos">
+            <div class="qs__container">
+                <div class="qs__title">
+                    <h3 class="p-4 fw-light text-white text-center">¿Quienes Somos?</h3>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div>
-                        <div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo enim non corporis ducimus
-                            illum fugit libero aperiam ex quisquam magnam velit, itaque similique aspernatur aliquid
-                            accusamus id quam dicta vitae!
+                <hr>
+                <div class="qs__wrapper-content">
+                    <div class="row">
+                        <div class="qs__image d-none d-sm-block col-md-6">
+                            <img class="img-thumbnail" src="./assets/img/quienes-somos.jpg" alt="">
                         </div>
-                        <div class="bg-info">
-                            <i class="fa-solid fa-mountain fa-sm" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div>
-                        <div class="bg-info">
-                            <i class="fa-solid fa-route fa-sm" style="color: #ffffff;"></i>
-                        </div>
-                        <div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo enim non corporis ducimus
-                            illum fugit libero aperiam ex quisquam magnam velit, itaque similique aspernatur aliquid
-                            accusamus id quam dicta vitae!
+                        <div class="qs__text col-md-6">
+                            <p class="text-white pt-4">Somos una agencia que nace en 2020 desde el amor a la naturaleza
+                                y las ganas de
+                                experienciar
+                                a profundidad los lugares naturales del sur de Chile.
+                                Trabajamos con guías profesionales registrados en sernatur, con certificaciones WFR al
+                                dia y
+                                que siempre están en busca de más conocimiento para brindar una experiencia única,
+                                entretenida e inolvidable.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Inicio destacados -->
-        <section id="destacados" class="text-center container mb-4">
-            <h3 class="text-white p-3 fw-light">Destacados</h3>
-            <hr>
-            <div class="row align-items-start text-white g-3">
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card w-100 h-100">
-                        <div class="card-body bg-info">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                        <img src="./assets/img/card1.jpg" class="card-img-bottom" alt="...">
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card w-100 h-100">
-                        <div class="card-body bg-info">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                        <img src="./assets/img/card2.jpg" class="card-img-bottom" alt="...">
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card w-100 h-100">
-                        <div class="card-body bg-info">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                        <img src="./assets/img/card3.jpg" class="card-img-bottom" alt="...">
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card w-100 h-100">
-                        <div class="card-body bg-info">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                        <img src="./assets/img/card4.jpg" class="card-img-bottom" alt="...">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- fin destacados -->
-        <!-- Inicio contacto -->
-        <section id="contacto" class="text-start container pb-2">
-            <h3 class="text-white text-center">Contacto</h3>
-            <hr>
-            <div>
-                <form class="text-white">
-                    <div class="mb-3">
-                        <label for="name" class="name">Nombre</label>
-                        <input type="name" class="form-control" id="name" aria-describedby="emailHelp">
+        </article>
 
-                        <div class="mb-3">
-                            <label for="asunto" class="asunto">Asunto</label>
-                            <input type="asunto" class="form-control" id="asunto">
+        <!-- Inicio destacados -->
+        <section id="destacados" class="my-4 container">
+            <h3 class="p-4 fw-light text-white text-center">Destacados</h3>
+            <hr>
+            <div class="row d-flex justify-content-evenly">
+                <div class="col-12 col-md-5">
+                    <div class="card mb-3">
+                        <div class="row h-100">
+                            <div class="col-md-5 g-0">
+                                <img src="./assets/img/card1.jpg" class="img-fluid h-100 object-fit-cover rounded-start"
+                                    alt="Parque Torre del Paine">
+                            </div>
+                            <div class="col-md-7 g-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">El Parque Nacional Torres del Paine está ubicado en la comuna
+                                        de
+                                        Torres
+                                        del Paine, Provincia de Última Esperanza, Región de Magallanes y de la Antártica
+                                        Chilena, a 400 km al noroeste de Punta Arenas y a 112 km al noroeste de Puerto
+                                        Natales.</p>
+                                </div>
+                                <div class="card-footer py-3 d-flex align-items-center">
+                                    <i class="fa-solid fa-plane-up px-2"></i>
+                                    <span class="card-text__p"><small class="text-body-secondary">
+                                            Vuelos desde
+                                        </small></span> <span
+                                        class="card-text__span ms-auto fw-semibold">$259.990</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="card mb-3">
+                        <div class="row h-100">
+                            <div class="col-md-5 g-0">
+                                <img src="./assets/img/card2.jpg" class="img-fluid h-100 object-fit-cover rounded-start"
+                                    alt="Parque Torre del Paine">
+                            </div>
+                            <div class="col-md-7 g-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">El Parque Nacional Torres del Paine está ubicado en la comuna
+                                        de
+                                        Torres
+                                        del Paine, Provincia de Última Esperanza, Región de Magallanes y de la Antártica
+                                        Chilena, a 400 km al noroeste de Punta Arenas y a 112 km al noroeste de Puerto
+                                        Natales.</p>
+                                </div>
+                                <div class="card-footer py-3 d-flex align-items-center">
+                                    <i class="fa-solid fa-plane-up px-2"></i>
+                                    <span class="card-text__p"><small class="text-body-secondary">
+                                            Vuelos desde
+                                        </small></span> <span
+                                        class="card-text__span ms-auto fw-semibold">$259.990</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-5 g-0">
+                                <img src="./assets/img/card3.jpg" class="img-fluid h-100 object-fit-cover rounded-start"
+                                    alt="Parque Torre del Paine">
+                            </div>
+                            <div class="col-md-7 g-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">El Parque Nacional Torres del Paine está ubicado en la comuna
+                                        de
+                                        Torres
+                                        del Paine, Provincia de Última Esperanza, Región de Magallanes y de la Antártica
+                                        Chilena, a 400 km al noroeste de Punta Arenas y a 112 km al noroeste de Puerto
+                                        Natales.</p>
+                                </div>
+                                <div class="card-footer py-3 d-flex align-items-center">
+                                    <i class="fa-solid fa-plane-up px-2"></i>
+                                    <span class="card-text__p"><small class="text-body-secondary">
+                                            Vuelos desde
+                                        </small></span> <span
+                                        class="card-text__span ms-auto fw-semibold">$259.990</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-5 g-0">
+                                <img src="./assets/img/card4.jpg" class="img-fluid h-100 object-fit-cover rounded-start"
+                                    alt="Parque Torre del Paine">
+                            </div>
+                            <div class="col-md-7 g-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">El Parque Nacional Torres del Paine está ubicado en la comuna
+                                        de
+                                        Torres
+                                        del Paine, Provincia de Última Esperanza, Región de Magallanes y de la Antártica
+                                        Chilena, a 400 km al noroeste de Punta Arenas y a 112 km al noroeste de Puerto
+                                        Natales.</p>
+                                </div>
+                                <div class="card-footer py-3 d-flex align-items-center">
+                                    <i class="fa-solid fa-plane-up px-2"></i>
+                                    <span class="card-text__p"><small class="text-body-secondary">
+                                            Vuelos desde
+                                        </small></span> <span
+                                        class="card-text__span ms-auto fw-semibold">$259.990</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            </div>       
+            </div>       
+            </div>       
+            </div>  
+            </div>  
+        </section>
+
+
+        <!-- fin destacados -->
+        <!-- inicio sección testimonios -->
+
+        <div class="testimonios container">
+            <div class="testimonios__container">
+                <div class="testimonios__wrapper-content">
+                    <p class="testimonios__text">
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
+                        numquam iure provident voluptate esse quasi, voluptas nostrum quisquam!"
+                    </p>
+                    <div class="testimonios__wrapper-image-name">
+                        <img class="testimonios__image" src="./assets/img/testimonio1.jpg">
+                        <p class="testimonios__name">- Mariela</p>
+                    </div>
+                </div>
+                <div class="testimonios__wrapper-content">
+                    <p class="testimonios__text">
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
+                        numquam iure provident voluptate esse quasi, voluptas nostrum quisquam!"
+                    </p>
+                    <div class="testimonios__wrapper-image-name">
+                        <img class="testimonios__image" src="./assets/img/testimonio2.jpg">
+                        <p class="testimonios__name">- Christian</p>
+                    </div>
+                </div>
+                <div class="testimonios__wrapper-content">
+                    <p class="testimonios__text">
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
+                        numquam iure provident voluptate esse quasi, voluptas nostrum quisquam!"
+                    </p>
+                    <div class="testimonios__wrapper-image-name">
+                        <img class="testimonios__image" src="./assets/img/testimonio3.jpg">
+                        <p class="testimonios__name">- Fernanda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inicio contacto -->
+        <section class="contactarme container">
+            <div class="contactarme__title-container py-3">
+                <h3 class="p-4 fw-light text-white text-center">Contactarme</h3>
+            </div>
+            <div class="contactarme__container">
+                <div class="contactarme__wrapper-content row">
+                    <div class="contactarme__formulario col-12 col-md-6 pb-3">
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleFormControlInput1" class="form-label">Nombre</label><i
+                                    class="fa-solid fa-circle-info px-1" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" data-bs-title="Ingresa tu primer nombre"></i>
+                                <input type="text" class="form-control" placeholder="" aria-label="First name">
+                            </div>
+                            <div class="col">
+                                <label for="exampleFormControlInput1" class="form-label">Apellido</label><i
+                                    class="fa-solid fa-circle-info px-1" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" data-bs-title="Ingresa tu apellido"></i>
+                                <input type="text" class="form-control" placeholder="" aria-label="Last name">
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+                            <label for="exampleFormControlInput1" class="form-label">Email</label><i
+                                class="fa-solid fa-circle-info px-1" data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-title="Ingresa tu correo electronico"></i>
+
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
+                        <div class="py-2">
+                            <input class="me-2" type="checkbox" name="checkboxCondiciones" id="" required>
+                            <!-- Button trigger modal -->
+                            <a class="text-white" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Acepto los terminos y condiciones
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 text-black" id="exampleModalLabel">Términos y
+                                                condiciones</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-black">
+                                            Terminos y condiciones ....
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta
+                                            reiciendis, fugit rerum natus similique provident officia, ipsam
+                                            exercitationem iure facilis, maxime vero labore neque! Alias repellat quod
+                                            quaerat amet.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cerrar</button>
 
-                        <button type="submit" class="btn btn-info text-white">Enviar</button>
-                </form>
-            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="liveAlertPlaceholder"></div>
+                        <div><button type="button" class="btn btn-light" id="liveAlertBtn">Enviar</button>
+                        </div>
+                    </div>
+                    <div class="contactarme__wrapper-datos col-12 col-md-6 pt-5">
+                        <div class="contactarme__datos">
+                            <i class="fa-solid fa-phone"></i>
+                            <p> +569-83341222</p>
+                        </div>
+                        <div class="contactarme__datos">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p> contacto@viajeschile.cl </p>
+                        </div>
+                        <div class="contactarme__datos">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <p> @viajeschile</p>
+                        </div>
+                        <div class="contactarme__datos">
+                            <i class="fa-brands fa-github"></i>
+                            <p> @viajeschile</p>
+                        </div>
+                        <div class="contactarme__datos">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>@viajeschile</p>
+                        </div>
+                    </div>
+                </div>
+
         </section>
+
         <!-- Fin sección Contacto -->
+
     </main>
 </body>
-    <!-- inicio footer -->
-    <footer class="container-fluid py-3 bg-info align-items-lg-baseline d-flex justify-content-around">
-        <p class="text-white fw-bold ">VIAJES CHILE</p>
-        <div id="iconos" class="">
-            <a href="https://github.com/"><i class="fa-brands fa-github fa-lg" style="color: #ffffff;"></i></a>
-            <a href="https://cl.linkedin.com/"><i class="fa-brands fa-linkedin fa-lg" style="color: #ffffff;"></i></a>
-            <a href="https://www.instagram.com/pumapardaexpeditions/"><i class="fa-brands fa-instagram fa-lg"
-                    style="color: #ffffff;"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-        </div>
-    </footer>
-    <!-- inicio footer -->
+<!-- inicio footer -->
+<footer class="container-fluid py-3 bg-info align-items-lg-baseline d-flex justify-content-around">
+    <p class="text-white fw-bold ">VIAJES CHILE</p>
+    <div id="iconos" class="">
+        <a href="https://github.com/"><i class="fa-brands fa-github fa-lg" style="color: #ffffff;"></i></a>
+        <a href="https://cl.linkedin.com/"><i class="fa-brands fa-linkedin fa-lg" style="color: #ffffff;"></i></a>
+        <a href="https://www.instagram.com/pumapardaexpeditions/"><i class="fa-brands fa-instagram fa-lg"
+                style="color: #ffffff;"></i></a>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+    </div>
+</footer>
+<!-- inicio footer -->
+
 </html>

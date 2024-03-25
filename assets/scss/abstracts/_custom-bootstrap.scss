@@ -1,0 +1,13 @@
+$custom-colors: (
+    "white":rgb(255, 255, 255),
+    "secundario":rgb(130, 77, 116),
+    "terciario":rgb(190, 123, 114),
+    "amarillopastel":rgb(243, 243, 122),
+    "naranjopastel":rgb(243, 186, 80),
+    "custom-adl":rgb(26, 134, 26),
+    "base":#F4EDCC
+
+);
+
+//Merge maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
