@@ -11982,6 +11982,18 @@ textarea.form-control-lg {
   padding-right: 10px;
 }
 
+.header__carousel-img {
+  height: 300px;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .header__carousel-img {
+    height: 500px;
+  }
+}
+
 .carousel {
   aspect-ratio: 121/81;
 }
