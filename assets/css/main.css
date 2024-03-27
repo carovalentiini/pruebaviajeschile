@@ -11982,20 +11982,17 @@ textarea.form-control-lg {
   padding-right: 10px;
 }
 
-.header__carousel-img {
-  height: 300px;
-  width: 100vw;
-  -o-object-fit: cover;
-     object-fit: cover;
+.carousel__image {
+  max-height: 500px;
+  min-height: 300px;
+  height: 500px;
+  width: 100%;
+  aspect-ratio: 3/2;
 }
-@media (min-width: 768px) {
-  .header__carousel-img {
-    height: 500px;
+@media screen and (max-width: 500px) {
+  .carousel carousel__image {
+    height: 300px;
   }
-}
-
-.carousel {
-  aspect-ratio: 121/81;
 }
 
 .testimonios__image {

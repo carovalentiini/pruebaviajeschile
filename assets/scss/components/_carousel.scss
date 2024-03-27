@@ -1,6 +1,31 @@
 // Archivo de carousel 
 .carousel {
-    
-    aspect-ratio: 121/81;
+
+      &__image {
+      height: 300px;
+      width: 100vw;
+      object-fit: cover;
+  
+      @media (min-width: 768px) {
+        height: 500px;
+      }
+    }
+  }
+    /* 
+      &__image {
+        max-height: 500px;
+        min-height: 300px;
+        height: 500px;
+        width: 100%;
+        aspect-ratio: 3/2;
+      }
+
+      @media screen and (max-width: 500px) {
+        carousel__image {
+            height: 300px;
+        }
         
+      } */
 }
+
+
