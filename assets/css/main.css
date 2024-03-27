@@ -11983,18 +11983,32 @@ textarea.form-control-lg {
 }
 
 .carousel__image {
-  max-height: 500px;
-  min-height: 300px;
-  height: 500px;
-  width: 100%;
-  aspect-ratio: 3/2;
+  height: 300px;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-@media screen and (max-width: 500px) {
-  .carousel carousel__image {
-    height: 300px;
+@media (min-width: 768px) {
+  .carousel__image {
+    height: 500px;
   }
 }
 
+/* 
+  &__image {
+    max-height: 500px;
+    min-height: 300px;
+    height: 500px;
+    width: 100%;
+    aspect-ratio: 3/2;
+  }
+
+  @media screen and (max-width: 500px) {
+    carousel__image {
+        height: 300px;
+    }
+
+  } */
 .testimonios__image {
   border-radius: 50%;
   width: 100px;
